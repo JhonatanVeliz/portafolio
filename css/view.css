@@ -1,0 +1,11 @@
+.container{
+    background-color: rgb(4, 4, 28);
+    display: grid;
+    place-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.content{
+    width: 95vw;
+    height: 95vh;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhonatan Veliz | Contacto</title>
+    <link rel="shortcut icon" href="./img/perfil-card.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script defer src="./js/contacto.js"></script>
+</head>
+<body>
+    
+    <main class="main">
+
+        <div class="regresar">
+            <a href="./index.html" class="btn regresar__btn">Regresar</a>
+        </div>
+
+        <form class="form">
+
+            <header class="form__header">
+                <div class="figure form__figure">
+                    <img src="./img/esfera.png" alt="figura esfera">
+                </div>
+
+                <div class="form__me">
+                    <img src="./img/me.png" alt="figura relacionada a mi persona">
+                </div>
+
+                <h1 class="form__title"><span class="form__title--violet">Jhona</span><span class="form__title--pink">tan Véliz</span></h1>
+            </header>
+
+            <div id="container-message">
+                <div class="form__message form__message__primary">
+                    <h2 class="form__subtitle">¡ Hola !</h2>
+                    <p class="form__text">¿Te gustaría trabajar juntos? Porfavor dejame tu mensaje.</p>
+                </div>
+
+                <div class="message__invalid-container">
+                    <div class="form__message form__message--right" id="invalid">
+                        <h2 class="form__subtitle">Mensaje Invalido</h2>
+                        <p class="form__text">Porfavor escribe un mensaje para ponernos en contacto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__input">
+
+                <button type="button" class="input__img btn" id="btnEmoji">
+                    <img src="./img/emoji.png" alt="imagen principal de los emojis">
+                </button>
+
+                <div class="form__emojis">
+                    <span class="emoji">&#128512;</span>
+                    <span class="emoji">&#128513;</span>
+                    <span class="emoji">&#128518;</span>
+                    <span class="emoji">&#128514;</span>
+                    <span class="emoji">&#129300;</span>
+                    <span class="emoji">&#129761;</span>
+                    <span class="emoji">&#128517;</span>
+                    <span class="emoji">&#128522;</span>
+                    <span class="emoji">&#128528;</span>
+                    <span class="emoji">&#128075;</span>
+                    <span class="emoji">&#128079;</span>
+                    <span class="emoji">&#129309;</span>
+                </div>
+
+                <input type="text" class="input" placeholder="Dejame tu mensaje aquí..." autocomplete="off" id="message">
+            </div>
+
+            <div class="form__btn">
+                <button type="submit" name="enviar" class="btn form__send" id="send">Enviar</button>
+            </div>
+
+        </form>
+
+        <!-- Figuras flotantes -->
+        <div class="figure figure--right figure__bk">
+            <img src="./img/dona.png" alt="figura de dona">
+            <img src="./img/cube.png" alt="figura de cubo">
+        </div>
+        <div class="figure figure--left figure__bk">
+            <img src="./img/pill.png" alt="figura de pincel">
+        </div>
+        <div class="figure figure--bk">
+            <img src="./img/Eclipse.png" alt="figura de gradiente">
+        </div>
+    </main>
+
+</body>
+</html>
