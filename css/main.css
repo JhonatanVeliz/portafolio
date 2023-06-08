@@ -16,6 +16,9 @@
     --fonts-secundary: 'Montserrat', sans-serif;
 }
                 /* GLOBALES */
+body{
+    background-color: var(--color-darkblue);
+}
 .container{
     margin: 0 auto;
     width: 80%;
@@ -222,7 +225,6 @@
 
                                         /* ABOUT */
 .main{
-    background-color: var(--color-darkblue);
     padding-bottom: 3rem;
 }
 .about{
