@@ -253,6 +253,9 @@ body{
     color: var(--color-primary);
 }
 /* -----------------------------------   PROJECTS  --------------------------------*/ 
+.projects{
+    min-height: auto;
+}
 .projects__layout{
     display: flex;
     flex-direction: column;
