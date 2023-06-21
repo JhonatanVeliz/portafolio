@@ -1,4 +1,3 @@
-                /* Custom Properties */
 :root{
     --color-darkblue: rgb(4, 4, 28);
     --color-black: #0B0B0C;
@@ -37,7 +36,6 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
 .title{
     font-size: 4rem;
     text-align: center;
@@ -72,6 +70,7 @@ body{
     border: none;
     cursor: pointer;
     font-size: 3rem;
+    max-width: 5rem;
     display: none;
 }
 .clouse{
@@ -102,11 +101,9 @@ body{
     background-attachment: fixed;
     position: relative;
 }
-
 .header__container{
     padding: 3rem 0 3rem 0;
 }
-
 .header__icon, .nav__link{
     color: var(--color-primary);
     font-family: var(--fonts-primary);
@@ -119,16 +116,13 @@ body{
 .container-links{
     display: flex;
 }
-
 .nav__link{
     margin-left: 2rem;
     font-style: italic;
 }
-
 .nav__link:hover{
     color: #0fbfc8;
 }
-
                             /* HERO */
 .hero{
     width: 100%;
@@ -137,14 +131,12 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .hero__container{
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
 .hero-img-container{
     width: 20rem;
     height: 20rem;
@@ -152,7 +144,6 @@ body{
     border-radius: 50%;
     /* background-color: rgb(26, 26, 27); */
 }
-
 .hero__img{
     width: 25rem;
     height: 25rem;
@@ -164,7 +155,6 @@ body{
     font-size: 5.2rem;
     letter-spacing: .3rem;
 }
-
 .hero__text{
     color: var(--color-salmon);
     margin-top: 1.5rem;
@@ -173,11 +163,9 @@ body{
     font-weight: 400;
     letter-spacing: 1px;
 }
-
 .span{
     color: var(--color-primary);
 }
-
                                 /* REDES SOCIALES DEL HEADER  */
 .header__footer{
     height: 10vh;
@@ -187,22 +175,18 @@ body{
     padding: 0;
     width: 100%;
 }
-
 .container-links-footer{
     display: flex;
 }
-
 .red-link{
     display: block;
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
 }
-
 .red-link:hover{
     transform: scale(1.1);
 }
-
 .in{
     display: block;
     width: 3.5rem;
@@ -218,11 +202,9 @@ body{
         transform: scale(1.1);
     }
 }
-
 .in img{
     border-radius: .5rem;
 }
-
                                         /* ABOUT */
 .main{
     padding-bottom: 3rem;
@@ -249,7 +231,6 @@ body{
 .about__link:hover{
     transform: scale(1.1);
 }
-
                                  /* SKILLS */
 .layout{
     padding-top: 5rem;
@@ -483,7 +464,6 @@ body{
     font-size: 1.5rem;
     text-align: end;
 }
-
                                     /* MEDIAQUERYS */
 @media screen and (max-width: 950px) {
     .hero__text{
@@ -551,13 +531,15 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        text-align: center;
+        align-items: center;
         transform: scale(0);
         transition: .3s linear;
+        padding-bottom: 10rem;
     }
     .nav__link{
         width: 100%;
         margin: 0;
+        text-align: center;
     }
     .container-links-footer{
         display: none;
@@ -598,7 +580,6 @@ body{
         text-align: center;
     }
 }
-
 @media screen and (max-width: 570px) {
     .text{
         font-size: 1.3rem;
@@ -641,7 +622,6 @@ body{
         transform: scale(1.1);
     }
 }
-
 @media screen and (max-width: 480px) {
     .layout-2{
         grid-template-columns: 1fr;

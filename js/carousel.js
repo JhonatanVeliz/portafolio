@@ -16,8 +16,8 @@ listadoDeCarousels.forEach((carousel)=>{
             draggable: true,
             dots: false,
             arrows: {
-                prev: `.btn--left`,
-                next: `.btn--right`,
+                prev: `#btn--left-${taimer}`,
+                next: `#btn--right-${taimer}`,
             },
         })
     }else{
@@ -33,4 +33,4 @@ listadoDeCarousels.forEach((carousel)=>{
         })
     };
     taimer++;
-})
+});
