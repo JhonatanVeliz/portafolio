@@ -71,4 +71,4 @@ observer.observe(historySub);
 observer.observe(historyText);
 observer.observe(skillsTit);
 observer.observe(skillsLayout);
-observer.observe(projects);
+// observer.observe(projects);
