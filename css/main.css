@@ -253,9 +253,6 @@ body{
     color: var(--color-primary);
 }
 /* -----------------------------------   PROJECTS  --------------------------------*/ 
-.projects{
-    min-height: auto;
-}
 .projects__layout{
     display: flex;
     flex-direction: column;
@@ -467,7 +464,9 @@ body{
     font-size: 1.5rem;
     text-align: end;
 }
-                                    /* MEDIAQUERYS */
+.projects{
+    min-height: auto;
+}                                 /* MEDIAQUERYS */
 @media screen and (max-width: 950px) {
     .hero__text{
         margin-top: 0;
