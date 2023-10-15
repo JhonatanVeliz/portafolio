@@ -1,19 +1,25 @@
 :root {
   --color-black: #030507;
   --color-white: #ededed;
-  --color-bg-light: #c1c1c1;
+  --color-bg: #c1c1c1;
   --color-bg-dark: #030507;
-  --color-pink: #cc0088;
+  --color-plus-links: #004cff;
   --color-aqua: #2194f2;
+  --color-blue-light: #004cff;
+  --color-border-top: linear-gradient(#303030, 50%, #0057FF 50%);
+  --color-text: #222;
   --w-300: 300;
   --w-600: 600;
   --w-800: 800;
 
+  --color-bg-card: #c1c1c1;
+  --border-card: #c1c1c103;
+  --box-card: #929292;
   --font-primary: 'Poppins', arial helvetica system;
 }
 
 body {
-  background: var(--color-bg-light);
+  background: var(--color-bg);
 }
 
 * {
@@ -27,6 +33,10 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.paddings{
+  padding: 3rem 0;
 }
 
 /* Seccion de portada */
@@ -51,7 +61,7 @@ body {
 .heroe__nav__content__bg{
   width: 100%;
   height: 3rem;
-  background: var(--color-bg-light);
+  background: var(--color-bg);
   border-radius: 2rem;
   display: flex;
   align-items: center;
@@ -143,7 +153,8 @@ body {
   left: -.5rem;
   width: 16rem;
   height: 16rem;
-  background: linear-gradient(#303030, 50%, #0057FF 50%);
+  background: var(--color-border-top);
+  /* linear-gradient(var(--color-border-top), 50%, #0057FF 50%) */
   border-radius: 50%;
   z-index: 5;
   box-shadow: 0 0 1rem #000000cd;
@@ -165,7 +176,7 @@ body {
   text-align: center;
   display: grid;
   gap: .5rem;
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .about__info__title span{
@@ -175,7 +186,7 @@ body {
   content: '';
   width: 100%;
   height: 105%;
-  background: var(--color-bg-light);
+  background: var(--color-bg);
   top: 0;
   left: 0;
   position: absolute;
@@ -208,6 +219,7 @@ body {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 1.7rem;
+  color: var(--color-text);
 }
 
 @keyframes aparecer {
@@ -217,4 +229,143 @@ body {
   to{
     opacity: 1;
   }
+}
+
+.about__contact{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__contact__btn{
+  padding: 1.5rem;
+  background: var(--color-blue-light);
+  color: var(--color-white);
+  border-radius: 1rem;
+}
+.about__contact__links{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.about__contact__link{
+  width: 4rem;
+}
+/* MAS FUNCIONALIDADES */
+.plus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.plus__title{
+  font-size: 3rem;
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  border-bottom: 1.5rem solid var(--color-black);
+}
+.plus__routers{
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+
+.plus__link{
+  font-weight: var(--w-800);
+  color: var(--color-plus-links);
+  font-size: 2.5rem;
+}
+
+.plus__link__active{
+  padding-bottom: 1.5rem;
+  border-bottom: 1rem solid var(--color-plus-links);
+}
+
+/* Pagina de historia */
+.history{
+  animation: aparecer 1.5s alternate forwards;
+  color: var(--color-text);
+}
+.history__title{
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+.history p{
+  text-align: center;
+  padding-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* PAGINA DE PROYECTOS */
+.projects{
+  padding-bottom: 3rem;
+}
+
+.projects__cards{
+  display: flex;
+  gap: 2rem;
+}
+.project__card{
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 28rem;
+  box-shadow: 0 0 1rem var(--box-card);
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--border-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  color: var(--color-text);
+}
+.project__card:hover{
+  opacity: .9;
+}
+.project__card__title{
+  text-align: center;
+  font: 1.8rem;
+}
+.project__card__text{
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 .5rem .5rem .5rem;
+}
+.project__card__tecnologies{
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  gap: .5rem;
+}
+.project__card__tecnologies__img{
+  width: 4rem;
+}
+
+/* Footer */
+.footer{
+  background: var(--color-black);
+}
+.footer__line{
+  text-align: center;
+  font-weight: var(--w-800);
+  color: var(--color-white);
+  font-size: 2rem;
+  position: relative;
+}
+.footer__line::after{
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 45%;
+  height: .5rem;
+  background: var(--color-aqua);
+}
+.footer__line::before{
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 45%;
+  height: .5rem;
+  background: var(--color-aqua);
 }
