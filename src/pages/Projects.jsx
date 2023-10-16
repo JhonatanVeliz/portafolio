@@ -1,6 +1,6 @@
 import ProjectCard from "../components/ProjectCard";
 
-import proyecto1 from "../img/proyecto-1.jpg";
+import sabor_sazon from "../img/proyecto-1.jpg";
 
 import html from "../img/html-min.png";
 import css from "../img/css-min.png";
@@ -8,35 +8,8 @@ import js from "../img/js-min.png";
 
 const tecnologies = [
   { 
-    img : proyecto1, title : 'Barber Shop', alt : 'proyecto de barberias', 
-    text : 'Plantilla web de una barber shop.', path : 'ruta', id : 311,
-      tecnologies : [
-      { img : html, alt : 'html' },
-      { img : css, alt : 'css' },
-      { img : js, alt : 'javascript' },
-    ]
-  },
-  { 
-    img : proyecto1, title : 'Barber Shop', alt : 'proyecto de barberias', 
-    text : 'Descripcion del proyecto', path : 'ruta', id : 321,
-      tecnologies : [
-      { img : html, alt : 'html' },
-      { img : css, alt : 'css' },
-      { img : js, alt : 'javascript' },
-    ]
-  },
-  { 
-    img : proyecto1, title : 'Barber Shop', alt : 'proyecto de barberias', 
-    text : 'Descripcion del proyecto', path : 'ruta', id : 331,
-      tecnologies : [
-      { img : html, alt : 'html' },
-      { img : css, alt : 'css' },
-      { img : js, alt : 'javascript' },
-    ]
-  },
-  { 
-    img : proyecto1, title : 'Barber Shop', alt : 'proyecto de barberias', 
-    text : 'Descripcion del proyecto', path : 'ruta', id : 341,
+    img : sabor_sazon, title : 'Sabor y Sazón', alt : 'proyecto de restaurante', 
+    text : 'Página web estatica de un restaurante.', path : 'https://jhonatanveliz.github.io/restaurant/index.html', id : 311,
       tecnologies : [
       { img : html, alt : 'html' },
       { img : css, alt : 'css' },

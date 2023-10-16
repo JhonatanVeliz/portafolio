@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
 const ProjectCard = ({ img, title, alt, text, path, tecnologies }) => {
   return (
-    <Link to={ path } className="project__card">
+    <a href={ path } className="project__card" target="_blank">
 
       <img src={ img } alt={ alt } />
 
@@ -26,7 +24,7 @@ const ProjectCard = ({ img, title, alt, text, path, tecnologies }) => {
         
       </div>
 
-    </Link>
+    </a>
   )
 }
 

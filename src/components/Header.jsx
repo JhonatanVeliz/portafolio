@@ -47,7 +47,7 @@ const Header = () => {
     }
   );
 
-  const handleMode = async () => {
+  const handleMode = () => {
 
     if (mode.title === 'claro') {
       setMode({
@@ -89,7 +89,7 @@ const Header = () => {
     document.documentElement.style.setProperty('--border-card', mode.color_border_card);
     document.documentElement.style.setProperty('--box-card', mode.color_box_card);
     document.documentElement.style.setProperty('--color-plus-links', mode.color_about_link);
-  }
+  };
 
   return (
     <header className="header">
