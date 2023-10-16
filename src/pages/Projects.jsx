@@ -20,7 +20,7 @@ const tecnologies = [
 
 const Projects = () => {
   return (
-    <div className='grid projects'>
+    <div className='grid projects' id="projects">
 
       <div className="projects__cards">
         {

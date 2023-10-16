@@ -14,7 +14,7 @@ const Dashboard = () => {
         </NavLink>
 
         <NavLink 
-          to={'/certifys'}
+          to={'/certificates'}
           className={({isActive}) => isActive ? 'plus__link__active plus__link' : 'plus__link'}
           >
           Certificaciones 

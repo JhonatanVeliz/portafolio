@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-const Links = ({ img = '', title = 'img', classNames = '', path = '/' }) => {
+const Links = ({ img = '', title = 'img', classNames = '', path = '/#projects' }) => {
   return (
-    <Link to={path} >
+    <HashLink to={path} >
       <img
         src={ img }
         alt={ title }
         className={classNames}
       />
-    </Link>
+    </HashLink>
   )
 }
 
