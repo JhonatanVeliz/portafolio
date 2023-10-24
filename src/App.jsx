@@ -15,7 +15,6 @@ import Visor from "./components/Visor";
 function App() {
 
   const stateFile = useSelector(state => state.visualizador[0].active);
-  console.log(stateFile);
 
   return (
 

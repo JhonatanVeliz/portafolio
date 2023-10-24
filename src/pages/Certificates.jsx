@@ -1,4 +1,4 @@
-import certificado_1 from "../certificaciones/fundamentos.png";
+import certificado_1 from "../certifications/fundamentos.png";
 
 import file from "../files/fundamentos.pdf";
 

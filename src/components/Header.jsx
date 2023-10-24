@@ -33,6 +33,8 @@ const tecnologies = [
 
 const Header = () => {
 
+  console.log('se renderizo');
+
   const [mode, setMode] = useState(
     {
       src: sun,
