@@ -11,7 +11,7 @@ const Visor = () => {
   }
 
   return (
-    <div className="visor">
+    <aside className="visor">
 
       <div className="visor__close">
         <button onClick={removeVisor}>
@@ -23,7 +23,7 @@ const Visor = () => {
         <p>asdasd</p>
       </object>
 
-    </div>
+    </aside>
   )
 }
 

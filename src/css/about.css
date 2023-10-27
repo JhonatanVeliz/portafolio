@@ -1,0 +1,119 @@
+:root{
+    --size-perfil: 15rem;
+    --size-perfil-border: 16rem;
+    --border-rounded: 50%;
+    --d-grid: grid;
+}
+
+.about__perfil {
+    margin: 0 auto;
+    margin-top: -7.5rem;
+    width: var(--size-perfil);
+    height: var(--size-perfil);
+    position: relative;
+    display: var(--d-grid);
+    place-content: center;
+  }
+  
+  .about__perfil__border {
+    position: absolute;
+    top: -.5rem;
+    left: -.5rem;
+    width: var(--size-perfil-border);
+    height: var(--size-perfil-border);
+    background: var(--color-border-top);
+    border-radius: var(--border-rounded);
+    z-index: 5;
+    box-shadow: 0 0 1rem #000000cd;
+  }
+  
+  .about__perfil__content{
+    width: var(--size-perfil);
+    height: var(--size-perfil);
+    background: var(--color-black);
+    border-radius: var(--border-rounded);
+    z-index: 10;
+  }
+  .about__info{
+    overflow: hidden;
+  }
+  .about__info__title{
+    padding-top: 3rem;
+    text-align: center;
+    display: var(--d-grid);
+    gap: .5rem;
+    color: var(--color-text);
+  }
+  
+  .about__info__title span{
+    position: relative;
+  }
+  .about__info__title__span::after{
+    content: '';
+    width: 100%;
+    height: 110%;
+    background: var(--color-bg);
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  
+  .about__info__title__span--1::after{
+    animation: mover 3.5s alternate forwards;
+  }
+  .about__info__title__span--2::after{
+    animation: mover 3.5s alternate forwards;
+    animation-delay: .5s;
+  }
+  
+  @keyframes mover {
+    from{
+      left: 0;
+    }
+    to{
+      left: 200%;
+    }
+  }
+  
+  .about__info__texts{
+    padding-top: 4rem;
+    animation: aparecer 3s alternate forwards;  
+  }
+  
+  .about__info__texts p{
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--color-text);
+  }
+  
+  @keyframes aparecer {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  
+  .about__contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about__contact__btn{
+    padding: 1.5rem;
+    background: var(--color-blue-light);
+    color: var(--color-white);
+    border-radius: 1rem;
+  }
+  .about__contact__links{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .about__contact__link{
+    width: 4rem;
+  }

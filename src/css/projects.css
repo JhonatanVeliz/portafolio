@@ -1,0 +1,50 @@
+
+.projects {
+    padding-bottom: 3rem;
+}
+
+.projects__cards {
+    display: flex;
+    gap: 2rem;
+    animation: aparecer 1.5s alternate forwards;
+    flex-wrap: wrap;
+}
+
+.project__card {
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 28rem;
+    box-shadow: 0 0 1rem var(--box-card);
+    background: var(--color-bg-card);
+    border: 1.5px solid var(--border-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: var(--color-text);
+}
+
+.project__card:hover {
+    opacity: .9;
+}
+
+.project__card__title {
+    text-align: center;
+    font: 1.8rem;
+}
+
+.project__card__text {
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 .5rem .5rem .5rem;
+}
+
+.project__card__tecnologies {
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    gap: .5rem;
+}
+
+.project__card__tecnologies__img {
+    width: 4rem;
+}

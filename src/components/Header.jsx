@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { changeVariableCss } from "../helpers";
 
 import html from "../img/html.png";
 import figma from "../img/figma.png";
@@ -17,6 +18,8 @@ import moon from "../img/moon.png";
 
 import LinksImg from "../hooks/LinksWithImg";
 
+import '../css/header.css';
+
 const tecnologies = [
   { title: "figma tecnologie", img: figma, id: 111 },
   { title: "html tecnologie", img: html, id: 112 },
@@ -33,65 +36,68 @@ const tecnologies = [
 
 const Header = () => {
 
-  console.log('se renderizo');
+  const initialState = {
+    src: sun,
+    title: 'claro',
+    color_bg: '#030507',
+    color_border_top: '#2194f2',
+    color_text: '#c1c1c1',
+    color_bg_card: '#050c1a',
+    color_border_card: '#2194f265',
+    color_box_card: '#9292920',
+    color_about_link: '#2194f2'
+  };
+
+  const secondState = {
+    src: moon,
+    title: 'oscuro',
+    color_bg: '#c1c1c1',
+    color_border_top: 'linear-gradient(#303030, 50%, #0057FF 50%)',
+    color_text: '#222',
+    color_bg_card: '#c1c1c1',
+    color_border_card: '#c1c1c103',
+    color_box_card: '#929292',
+    color_about_link: '#004cff'
+  }
 
   const [mode, setMode] = useState(
-    {
-      src: sun,
-      title: 'claro',
-      color_bg: '#030507',
-      color_border_top: '#2194f2',
-      color_text: '#c1c1c1',
-      color_bg_card: '#050c1a',
-      color_border_card: '#2194f265',
-      color_box_card: '#9292920',
-      color_about_link: '#2194f2'
-    }
+    JSON.parse(localStorage.getItem('theme')) || initialState
   );
 
   const handleMode = () => {
 
     if (mode.title === 'claro') {
-      setMode({
-        src: moon,
-        title: 'oscuro',
-        color_bg: '#c1c1c1',
-        color_border_top: 'linear-gradient(#303030, 50%, #0057FF 50%)',
-        color_text: '#222',
-        color_bg_card: '#c1c1c1',
-        color_border_card: '#c1c1c103',
-        color_box_card: '#929292',
-        color_about_link: '#004cff'
-      });
-      document.documentElement.style.setProperty('--color-bg', mode.color_bg);
-      document.documentElement.style.setProperty('--color-border-top', mode.color_border_top);
-      document.documentElement.style.setProperty('--color-text', mode.color_text);
-      document.documentElement.style.setProperty('--color-bg-card', mode.color_bg_card);
-      document.documentElement.style.setProperty('--border-card', mode.color_border_card);
-      document.documentElement.style.setProperty('--box-card', mode.color_box_card);
-      document.documentElement.style.setProperty('--color-plus-links', mode.color_about_link);
+      setMode(secondState);
+      changeVariableCss([
+        {nameVariable: '--color-bg', valueVariable: mode.color_bg},
+        {nameVariable: '--color-border-top', valueVariable: mode.color_border_top},
+        {nameVariable: '--color-text', valueVariable: mode.color_text},
+        {nameVariable: '--color-bg-card', valueVariable: mode.color_bg_card},
+        {nameVariable: '--border-card', valueVariable: mode.color_border_card},
+        {nameVariable: '--box-card', valueVariable: mode.color_box_card},
+        {nameVariable: '--color-plus-links', valueVariable: mode.color_about_link},
+      ]);
+      localStorage.setItem('theme', JSON.stringify(mode));
       return;
     }
 
-    setMode({
-      src: sun,
-      title: 'claro',
-      color_bg: '#030507',
-      color_border_top: '#2194f2',
-      color_text: '#c1c1c1',
-      color_bg_card: '#030812',
-      color_border_card: '#2194f265',
-      color_box_card: '#9292920',
-      color_about_link: '#2194f2'
-    });
-    document.documentElement.style.setProperty('--color-border-top', mode.color_border_top);
-    document.documentElement.style.setProperty('--color-bg', mode.color_bg);
-    document.documentElement.style.setProperty('--color-text', mode.color_text);
-    document.documentElement.style.setProperty('--color-bg-card', mode.color_bg_card);
-    document.documentElement.style.setProperty('--border-card', mode.color_border_card);
-    document.documentElement.style.setProperty('--box-card', mode.color_box_card);
-    document.documentElement.style.setProperty('--color-plus-links', mode.color_about_link);
+    setMode(initialState);
+    changeVariableCss([
+      {nameVariable: '--color-bg', valueVariable: mode.color_bg},
+      {nameVariable: '--color-border-top', valueVariable: mode.color_border_top},
+      {nameVariable: '--color-text', valueVariable: mode.color_text},
+      {nameVariable: '--color-bg-card', valueVariable: mode.color_bg_card},
+      {nameVariable: '--border-card', valueVariable: mode.color_border_card},
+      {nameVariable: '--box-card', valueVariable: mode.color_box_card},
+      {nameVariable: '--color-plus-links', valueVariable: mode.color_about_link},
+    ])
+    localStorage.setItem('theme', JSON.stringify(mode));
   };
+
+  useEffect(() => {
+    handleMode();
+  }, [])
+  
 
   return (
     <header className="header">
@@ -108,7 +114,8 @@ const Header = () => {
                 className={`heroe__nav__content__rounded 
                   ${mode.title == 'claro'
                     ? 'heroe__nav__content__rounded--light'
-                    : 'heroe__nav__content__rounded--dark'}`}
+                    : 'heroe__nav__content__rounded--dark'}`
+                  }
               >
                 <img src={mode.src} alt={mode.title} />
               </div>

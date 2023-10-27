@@ -1,0 +1,57 @@
+/* Pagina de historia */
+.history {
+    animation: aparecer 1.5s alternate forwards;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    color: var(--color-text);
+}
+.history__perfil {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.history__perfil__title {
+    font-size: 2.4rem;
+    text-align: center;
+}
+.history__perfil__img {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    background: var(--color-black);
+}
+
+.history__information {
+    width: 70%;
+    padding-bottom: 4rem;
+}
+
+.history__information__title{
+    text-align: left;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.history__information__text{
+    text-align: left;
+    padding-bottom: 1rem;
+    line-height: 1.5;
+}
+@media screen and (max-width: 900px) {
+    .history{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .history__information{
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .history__perfil{
+        display: none;
+    }
+}

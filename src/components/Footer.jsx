@@ -7,6 +7,8 @@ import perfil_github from '../img/perfil_github.png';
 import perfil_instagram from '../img/perfil_instagram.png';
 import FooterLink from "./FooterLink";
 
+import '../css/footer.css'
+
 const Footer = () => {
 
   const perfils = [

@@ -3,14 +3,13 @@ import { useSelector } from "react-redux";
 
 import Header from "./components/Header";
 import About from "./components/About";
-import Dashboard from "./components/Dashboard";
+import RoutesLinks from "./components/RoutesLinks";
 import MyHistory from "./pages/MyHistory";
 import Projects from "./pages/Projects";
 import NoFound from "./pages/NoFound";
 import Footer from "./components/Footer";
 import { Certificates } from "./pages/Certificates";
 import Visor from "./components/Visor";
-
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
 
       <Header />
       <About />
-      <Dashboard />
+      <RoutesLinks />
 
       { stateFile ? <Visor /> : '' }
 

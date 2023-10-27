@@ -7,11 +7,11 @@ import CardCertificate from "../components/CardCertificate";
 export const Certificates = () => {
 
   const listCertificates = [
-    { id: 411, title : 'Fundamentos', description : 'asasd', file, img: certificado_1, alt: 'certificado 1' }
+    { id: 411, title : 'Fundamentos', description : 'Certificación de Fundamentos de Programación', file, img: certificado_1, alt: 'certificado 1' }
   ]
 
   return (
-    <div className='grid paddings projects projects__cards'>
+    <article className='grid paddings projects projects__cards'>
 
       {
         listCertificates.map((certificate) => (
@@ -26,6 +26,6 @@ export const Certificates = () => {
         ))
       }
 
-    </div>
+    </article>
   )
 }

@@ -34,6 +34,7 @@ const TecnologieImg = ({ img, alt }) => {
       src={img}
       alt={alt}
       className="project__card__tecnologies__img"
+      title={alt}
     />
   )
 };
