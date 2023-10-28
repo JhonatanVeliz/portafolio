@@ -163,9 +163,6 @@ body {
   .router__route{
     font-size: 1.5rem;
   }
-  .footer__nav{
-    justify-content: space-between;
-  }
   .footer__nav__link{
     width: auto;
   }
