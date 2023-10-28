@@ -39,7 +39,9 @@ const About = () => {
         <div className="about__info__texts">
 
           <p>
-            Soy un entusiasta desarrollador web, apasionado por transformar ideas en sitios web cautivadores y funcionales. Mi enfoque se centra en la optimización de la experiencia del usuario y el rendimiento. Estoy comprometido a mantenerme actualizado con las últimas tendencias y tecnologías web para ofrecer soluciones de vanguardia. Juntos, podemos hacer que tu visión cobre vida en la web.
+            Soy un desarrollador autodidacta desde los 18 años, dispuesto a dar vida a tus ideas. Mi especialidad se encuentra en el área del frontend, aunque disfruto explorar y aprender de todos los aspectos del desarrollo web.
+            <br />
+            ¡Listo para convertir tus proyectos en realidad!
           </p>
 
         </div>
