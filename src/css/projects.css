@@ -47,4 +47,8 @@
 
 .project__card__tecnologies__img {
     width: 4rem;
+    transition: .4s ease-in-out;
+}
+.project__card__tecnologies__img:hover{
+    transform: rotate(30deg);
 }
